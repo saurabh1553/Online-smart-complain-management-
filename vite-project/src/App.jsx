@@ -13,6 +13,7 @@ export default function App() {
   const [userName, setUserName] = useState("");
   const [inputFullName, setInputFullName] = useState("");
   const [inputUser, setInputUser] = useState("");
+  const [inputPass, setInputPass] = useState("");
   const [error, setError] = useState("");
   const [ticketTitle, setTicketTitle] = useState("");
   const [ticketDesc, setTicketDesc] = useState("");
@@ -92,7 +93,7 @@ export default function App() {
       setTicketTitle("");
       setTicketDesc("");
       setTab("records");
-    } catch (err) {
+    } catch {
       alert("Database error!");
     }
   };
@@ -102,7 +103,7 @@ export default function App() {
       await axios.put(`${API_URL}/${id}`, { status: newStatus });
       fetchTickets();
       alert("Status Updated!");
-    } catch (err) {
+    } catch {
       alert("Update Failed!");
     }
   };
