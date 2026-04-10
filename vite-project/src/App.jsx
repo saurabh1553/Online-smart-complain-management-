@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ShieldCheck, Zap, LayoutGrid, PlusCircle, Archive, LogOut, User, Cpu, CheckCircle, Clock, Activity, ArrowLeft, UserPlus } from 'lucide-react';
 
-const API_URL = "/api/tickets";
-const AUTH_URL = "/api/auth";
+const API_URL = "https://online-smart-complain-management.onrender.com/api/tickets";
+const AUTH_URL = "https://online-smart-complain-management.onrender.com/api/auth";
 
 export default function App() {
   const [isAuth, setIsAuth] = useState(false);
